@@ -5,7 +5,21 @@
   "description": "Simple, fast, local notes for yourself. No cloud, no login, just your notes.",
   "permissions": ["storage"],
   "action": {
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/note-16px.png",
+      "32": "icons/note-32px.png",
+      "48": "icons/note-48px.png",
+      "96": "icons/note-96px.png",
+      "128": "icons/note-128px.png"
+    }
+  },
+  "icons": {
+    "16": "icons/note-16px.png",
+    "32": "icons/note-32px.png",
+    "48": "icons/note-48px.png",
+    "96": "icons/note-96px.png",
+    "128": "icons/note-128px.png"
   },
   "background": {
     "service_worker": "background.js"
