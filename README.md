@@ -1,6 +1,5 @@
 # 📝 Quick Notes
 
-[![Chrome Web Store](https://img.shields.io/badge/Chrome-Web%20Store-blue)]()
 [![GitHub license](https://img.shields.io/github/license/YOUR_USERNAME/quick-notes)](https://github.com/YOUR_USERNAME/quick-notes/blob/main/LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/YOUR_USERNAME/quick-notes)](https://github.com/YOUR_USERNAME/quick-notes/stargazers)
 [![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -19,13 +18,9 @@ A simple, fast, local notes Chrome extension. No cloud, no login, no tracking. J
 
 ## 📸 Screenshots
 
-| Main view | Notes list |
-|-----------|------------|
-| ![Main](screenshots/screenshot-1.png) | ![Notes](screenshots/screenshot-2.png) |
-
-| Writing note | Delete note |
-|--------------|-------------|
-| ![Write](screenshots/screenshot-3.png) | ![Delete](screenshots/screenshot-4.png) |
+| Writing a note | Notes list |
+|----------------|------------|
+| ![Writing](screenshots/quick-notes-1.png) | ![Notes](screenshots/quick-notes-2.png) |
 
 ## 🚀 Installation
 
