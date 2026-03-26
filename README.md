@@ -1,6 +1,7 @@
 # 📝 Quick Notes
 
-
+[![GitHub license](https://img.shields.io/github/license/ievgeniipodovinnikov/quick-notes)](https://github.com/ievgeniipodovinnikov/quick-notes/blob/main/LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/ievgeniipodovinnikov/quick-notes)](https://github.com/ievgeniipodovinnikov/quick-notes/stargazers)
 [![Made with JavaScript](https://img.shields.io/badge/Made%20with-JavaScript-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 A simple, fast, local notes Chrome extension. No cloud, no login, no tracking. Just your notes.
