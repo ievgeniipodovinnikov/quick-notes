@@ -25,7 +25,9 @@ A simple, fast, local notes Chrome extension. No cloud, no login, no tracking. J
 
 ## 🚀 Installation
 
-### From Chrome Web Store (coming soon)
+### From Chrome Web Store
+
+[![Add to Chrome](https://img.shields.io/badge/Add%20to-Chrome-blue)](https://chromewebstore.google.com/detail/quick-notes/leimoijdccoecdbglffjciheaikaeabe)
 
 ### From source (developer mode)
 
