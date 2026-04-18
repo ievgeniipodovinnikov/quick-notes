@@ -10,17 +10,32 @@ A simple, fast, local notes Chrome extension. No cloud, no login, no tracking. J
 ## ✨ Features
 
 - 📝 **Quick notes** — open and write instantly
-- 💾 **Auto-save** — notes saved locally
-- 📜 **History** — all notes with timestamps
-- 🗑️ **Delete** — remove individual notes or clear all
-- ⌨️ **Keyboard shortcut** — `Ctrl+Enter` to save
-- 🔒 **Privacy first** — all data stays on your device
-- 🎨 **Dark theme** — easy on the eyes
+- 💾 **Persistent drafts** — never lose what you're writing (even if you close the popup!)
+- 🔍 **Search & filter** — find notes instantly with real-time highlighting
+- 🌓 **Light & Dark themes** — easy on the eyes, pick your favorite
+- 📋 **One-click copy** — copy any note to clipboard instantly
+- 📜 **History with timestamps** — all notes with relative time ("2 min ago", "yesterday")
+- 🗑️ **Delete options** — remove individual notes or clear all with confirmation
+- ⌨️ **Keyboard shortcut** — `Ctrl+Enter` to save notes faster
+- 🔒 **Privacy first** — all data stays on your device using `chrome.storage.local`
+- 🎨 **Modern UI** — clean design with smooth animations
+
+## 🆕 What's New in v2.0
+
+- 🌓 **Dark/Light theme toggle** — switch between modes, your preference is saved
+- 🔍 **Real-time search** — filter notes and see highlighted matches
+- 💾 **Draft auto-save** — close the popup, come back, your text is still there
+- 📋 **Copy button** — copy any note with a single click
+- 🎨 **Complete UI redesign** — smoother, faster, more intuitive
 
 ## 📸 Screenshots
 
-| Writing a note | Notes list |
-|----------------|------------|
+| Dark Theme | Light Theme | Search Feature |
+|------------|-------------|----------------|
+| ![Dark Theme](screenshots/quick-notes-dark.png) | ![Light Theme](screenshots/quick-notes-light.png) | ![Search](screenshots/quick-notes-search.png) |
+
+| Writing a note | Notes list with copy button |
+|----------------|----------------------------|
 | ![Writing](screenshots/quick-notes-1.png) | ![Notes](screenshots/quick-notes-2.png) |
 
 ## 🚀 Installation
@@ -28,6 +43,11 @@ A simple, fast, local notes Chrome extension. No cloud, no login, no tracking. J
 ### From Chrome Web Store
 
 [![Add to Chrome](https://img.shields.io/badge/Add%20to-Chrome-blue)](https://chromewebstore.google.com/detail/quick-notes/leimoijdccoecdbglffjciheaikaeabe)
+
+1. Click the link above or search "Quick Notes" in Chrome Web Store
+2. Click **"Add to Chrome"**
+3. Click the extension icon in your browser toolbar
+4. Start taking notes!
 
 ### From source (developer mode)
 
