@@ -9,6 +9,9 @@
   <div class="container">
     <div class="header">
       <h1>📝 Quick Notes</h1>
+      <button id="theme-toggle" class="theme-toggle" title="Toggle theme">
+        <i class="fas fa-moon"></i>
+      </button>
     </div>
 
     <div class="note-editor">
@@ -24,8 +27,14 @@
       <button id="clear-all" class="clear-all-btn">Clear all</button>
     </div>
 
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="search-input" placeholder="Filter notes..." class="search-input">
+      <button id="clear-search" class="clear-search-btn" style="display: none;">×</button>
+    </div>
+
     <div id="notes-list" class="notes-list">
-      <div class="empty-state">No notes yet. Write something above.</div>
+      <div class="empty-state">📭 No notes yet. Write something above.</div>
     </div>
 
     <div class="footer">

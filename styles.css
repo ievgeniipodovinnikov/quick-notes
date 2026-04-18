@@ -1,3 +1,42 @@
+:root {
+  /* Тёмная тема (по умолчанию) */
+  --bg-primary: #000000;
+  --bg-secondary: #1c1c1e;
+  --bg-tertiary: #2c2c2e;
+  --border-color: #3a3a3c;
+  --text-primary: #ffffff;
+  --text-secondary: #e5e5ea;
+  --text-muted: #8e8e93;
+  --text-dim: #6b6b70;
+  --accent: #c084fc;
+  --accent-hover: #a855f7;
+  --danger: #ff6b6b;
+  --danger-hover: #ff5252;
+  --success: #4ade80;
+  --scrollbar-track: #1c1c1e;
+  --scrollbar-thumb: #3a3a3c;
+  --scrollbar-thumb-hover: #c084fc;
+}
+
+[data-theme="light"] {
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0f0f0;
+  --border-color: #e0e0e0;
+  --text-primary: #1a1a1a;
+  --text-secondary: #2c2c2c;
+  --text-muted: #6c6c6c;
+  --text-dim: #8a8a8a;
+  --accent: #9333ea;
+  --accent-hover: #7e22ce;
+  --danger: #dc2626;
+  --danger-hover: #b91c1c;
+  --success: #22c55e;
+  --scrollbar-track: #e5e5e5;
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-thumb-hover: #9333ea;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +46,10 @@
 body {
   width: 380px;
   max-height: 550px;
-  background: #000000;
+  background: var(--bg-primary);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-  color: #ffffff;
+  color: var(--text-primary);
+  transition: background 0.3s, color 0.3s;
 }
 
 .container {
@@ -19,6 +59,7 @@ body {
 .header {
   text-align: center;
   margin-bottom: 12px;
+  position: relative;
 }
 
 .header h1 {
@@ -30,28 +71,50 @@ body {
   color: transparent;
 }
 
+.theme-toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 4px 8px;
+  cursor: pointer;
+  color: var(--accent);
+  font-size: 12px;
+  transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.05);
+}
+
 .note-editor {
-  background: #1c1c1e;
+  background: var(--bg-secondary);
   border-radius: 12px;
   padding: 12px;
   margin-bottom: 12px;
+  border: 1px solid var(--border-color);
 }
 
 #note-input {
   width: 100%;
-  background: #2c2c2e;
-  border: 1px solid #3a3a3c;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
   border-radius: 8px;
-  color: #ffffff;
+  color: var(--text-primary);
   font-size: 12px;
   padding: 10px;
   font-family: inherit;
   resize: vertical;
   outline: none;
+  transition: all 0.2s;
 }
 
 #note-input:focus {
-  border-color: #c084fc;
+  border-color: var(--accent);
   box-shadow: 0 0 0 2px rgba(192, 132, 252, 0.2);
 }
 
@@ -73,7 +136,7 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #c084fc, #a855f7);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   color: white;
 }
 
@@ -83,12 +146,13 @@ body {
 }
 
 .btn-secondary {
-  background: #2c2c2e;
-  color: #c084fc;
+  background: var(--bg-tertiary);
+  color: var(--accent);
+  border: 1px solid var(--border-color);
 }
 
 .btn-secondary:hover {
-  background: #3a3a3c;
+  background: var(--border-color);
 }
 
 .notes-header {
@@ -98,62 +162,188 @@ body {
   margin-bottom: 10px;
   font-size: 12px;
   font-weight: 600;
-  color: #8e8e93;
+  color: var(--text-muted);
 }
 
 .clear-all-btn {
-  background: #2c2c2e;
-  border: 1px solid #3a3a3c;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 4px 10px;
   font-size: 10px;
   cursor: pointer;
-  color: #ff6b6b;
+  color: var(--danger);
   transition: all 0.2s;
 }
 
 .clear-all-btn:hover {
-  background: #ff6b6b;
+  background: var(--danger);
   color: white;
-  border-color: #ff6b6b;
+  border-color: var(--danger);
 }
 
+.search-container {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 30px 8px 30px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 11px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.search-input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(192, 132, 252, 0.2);
+}
+
+.search-input::placeholder {
+  color: var(--text-dim);
+}
+
+.clear-search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: var(--bg-tertiary);
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.clear-search-btn:hover {
+  background: var(--border-color);
+  color: var(--danger);
+}
+
+/* ИСПРАВЛЕНО: добавлен отступ справа и убран translateX */
 .notes-list {
-  max-height: 280px;
+  max-height: 260px;
   overflow-y: auto;
+  padding-right: 4px;
 }
 
+.notes-list:after {
+  content: '';
+  display: block;
+  height: 2px;
+}
+
+/* Стили скролла для notes-list */
+.notes-list::-webkit-scrollbar {
+  width: 4px;
+}
+
+.notes-list::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 4px;
+  margin: 4px 0;
+}
+
+.notes-list::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+
+.notes-list::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* ИСПРАВЛЕНО: убрано смещение при наведении */
 .note-item {
-  background: #1c1c1e;
+  background: var(--bg-secondary);
   border-radius: 10px;
   padding: 10px;
   margin-bottom: 8px;
   position: relative;
+  border: 1px solid var(--border-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.note-item:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .note-text {
   font-size: 11px;
   line-height: 1.4;
-  color: #e5e5ea;
+  color: var(--text-secondary);
   white-space: pre-wrap;
   word-break: break-word;
   padding-right: 40px;
+  margin-bottom: 10px;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 24px;
 }
 
 .note-date {
   font-size: 9px;
-  color: #6b6b70;
-  margin-top: 6px;
-  display: block;
+  color: var(--text-dim);
+  position: absolute;
+  left: 0;
+}
+
+.copy-note {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--accent);
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  font-size: 11px;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.copy-note:hover {
+  background: var(--accent);
+  color: white;
+  transform: scale(1.05);
 }
 
 .delete-note {
   position: absolute;
   top: 8px;
   right: 8px;
-  background: #2c2c2e;
-  border: none;
-  color: #ff6b6b;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  color: var(--danger);
   cursor: pointer;
   width: 24px;
   height: 24px;
@@ -163,43 +353,45 @@ body {
 }
 
 .delete-note:hover {
-  background: #ff6b6b;
+  background: var(--danger);
   color: white;
+  border-color: var(--danger);
 }
 
 .empty-state {
   text-align: center;
   padding: 30px 20px;
-  color: #8e8e93;
+  color: var(--text-muted);
   font-size: 11px;
 }
 
+/* Общие стили скролла для body (если нужно) */
 ::-webkit-scrollbar {
   width: 4px;
 }
 ::-webkit-scrollbar-track {
-  background: #1c1c1e;
+  background: var(--scrollbar-track);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3a3a3c;
+  background: var(--scrollbar-thumb);
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #c084fc;
+  background: var(--scrollbar-thumb-hover);
 }
 
 .footer {
   text-align: center;
   margin-top: 12px;
   padding-top: 8px;
-  border-top: 1px solid #2c2c2e;
+  border-top: 1px solid var(--border-color);
   font-size: 9px;
-  color: #8e8e93;
+  color: var(--text-muted);
 }
 
 .footer a {
-  color: #c084fc;
+  color: var(--accent);
   text-decoration: none;
 }
 
@@ -211,4 +403,12 @@ body {
   0% { opacity: 1; }
   70% { opacity: 1; }
   100% { opacity: 0; visibility: hidden; }
+}
+
+/* Подсветка найденного текста */
+.search-highlight {
+  background: rgba(192, 132, 252, 0.3);
+  border-radius: 2px;
+  padding: 0 2px;
+  font-weight: 500;
 }
